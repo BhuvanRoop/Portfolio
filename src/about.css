@@ -1,0 +1,158 @@
+.about-sect{
+    position: absolute;
+}
+.about-content{
+    position: relative;
+    top: 100vh;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    padding: 1em;
+}
+.col-1{
+    display: flex;       
+    width: 40%;
+}
+.col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.col-2{
+    padding: 0.5em 1em;
+    width: 55%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.sub-sec{
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+.sub-sec p{
+    cursor: pointer;
+    position: relative;
+}
+.sub-sec p::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: rgb(224, 66, 92);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition:  all 0.3s ease-in;
+}
+.sub-sec p:hover::after{
+    width: 100%;
+}
+.details{
+    margin-top: 0.7em;
+}
+.details ul li{
+    list-style: none;
+    color: white;
+}
+
+@media (max-width:950px){
+    .big-heading{
+        display: none;
+    }
+    .head{
+        display: flex;
+        justify-content: center;
+    }
+    .container{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .col-1{
+        width: 100%;
+        justify-content: center;
+        align-items: center; 
+    }
+    .col-2{
+        margin-top: 0.7em;        
+    }
+}
+
+@media (max-width:450px){
+    .col-1{
+        justify-content: center;
+        align-items: center; 
+    }
+    .col-1 img{
+        width: 100%;
+    }
+    .col-2{
+        width: 100%;
+    }
+}
+
+@media (min-width:450px) and (max-width:670px){
+    .col-1{
+        justify-content: center;
+        align-items: center; 
+    }
+    .col-1 img{
+        width: 80%;
+    }
+    .col-2{
+        width: 100%;
+    }
+}
+
+@media (min-width:670px) and (max-width:950px){
+    .col-1 img{
+        width: 60%;
+    }
+    .col-2{
+        width: 100%;
+    }
+    .col-2 p{
+        text-align: center;
+    }
+}
+@media(min-width:950px){
+    .small-heading{
+        display: none;
+    }
+}
+
+@media(min-width:1400px) and (max-width:2000px){
+    .col-1{
+        width: 38%;
+        justify-content: center;
+    }
+    .col-1 img{
+        width: 100%;
+    }
+    .col-2{
+        width: 60%;
+    }
+    .col-2 h1{
+        font-size: 3rem;
+    }
+    .col-2 p{
+        font-size: 1.8rem;
+    }
+    .details ul li{
+        font-size: 1.5rem;
+    }
+}
+@media (min-width:2000px){
+    .col-2 h1{
+        font-size: 4rem;
+    }
+    .col-2 p{
+        font-size: 2.2rem;
+    }
+    .details ul li{
+        font-size: 1.8rem;
+    }
+}

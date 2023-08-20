@@ -1,0 +1,113 @@
+.contact{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2em;
+}
+.contact1{
+    flex-basis: 35%;
+    padding-left: 5em;
+    display: flex;
+    flex-direction: column;
+}
+.contact2{
+    flex-basis: 40%;
+    max-width: 600px; 
+}
+.form{
+    display: flex;
+    flex-direction: column;
+}
+.mail{
+    margin: 0.8em 0;
+    font-size: 1.2rem;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+}
+.mail img{
+    width: 7%;
+}
+.contact-media{
+    display: flex;
+    width: 70%;
+}
+.contact-media a{    
+    width: 20%;
+    margin: 0.3em;
+}
+.contact-media img{
+    background-color: aqua;
+    padding: 5px;
+    width: 70%;
+    border-radius: 40%;
+    min-width: 30px;
+}
+.contact-media img:hover{
+    transform: scale(1.1);
+    transition: 0.1s ease-in;
+}
+.contact1 button{
+    background-color: red;
+    border-radius: 5px;
+    border: none;
+    margin-top: 1em;
+    padding: 1em;
+    width: 50%;
+    cursor: pointer;
+    max-width: 185px;
+    color: white;
+}
+@media(max-width:950px){
+    .contact{
+        flex-direction: column;
+        justify-content: center;
+        padding:0 1em
+    }
+    .contact1{
+        margin-bottom: 1em;
+    }
+    .contact2{
+        max-width: 470px;      
+    }    
+    .contact1 button{
+        padding: 0.5em;
+        max-width: 120px;
+    }
+    .mail img{
+        max-width: 30px;
+    }
+    .contact-media img{
+        max-width: 45px;
+    }     
+}
+@media(max-width:450px){
+    .mail a,p{
+        font-size: 13px;
+    }
+
+}
+@media(min-width:550px) and (max-width:700px){
+    .contact{
+        padding-left: 5em;
+    }
+    .contact1{
+        padding: 0;
+    }
+}
+@media(min-width:700px) and (max-width:800px){
+    .contact{
+        padding-left: 9em;
+    }
+    .contact1{
+        padding: 0;
+    }
+}
+@media(min-width:800px) and (max-width:950px){
+    .contact{
+        padding-left: 11em;
+    }
+    .contact1{
+        padding: 0;
+    }
+}
