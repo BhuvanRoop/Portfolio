@@ -1,5 +1,6 @@
-.header-text{
-    position: relative;
-    top: 100px;
-    left: 100px;
+.banner{
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }

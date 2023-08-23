@@ -3,12 +3,9 @@ import './banner.css'
 
 const Banner = () => {
   return (
-    <div className='banner' style={{position:'absolute'}}>
-      <div className="header-text">
+    <div className='banner' >
         <h1 style={{color:'white'}}>Hi,I am <span style={{color:'red'}}> Bhuvan</span></h1>
-        <p style={{color:'white'}}> I am a Web Developer</p>
-      </div>
-      
+        <h3 style={{color:'white'}}> I am a Web Developer</h3>    
     </div>
   )
 }
