@@ -1,11 +1,13 @@
+
+import { useRef } from 'react'
 import React from 'react'
 import './contact.css'
-import call from './call.png'
-import mail from './mail.png'
+import call from './Assets/call.png'
+import mail from './Assets/mail.png'
 import { TextField,Button } from '@mui/material'
-import { useState } from 'react'
 import { createMuiTheme,ThemeProvider } from '@mui/material'
 import SendIcon from '@mui/icons-material/Send';
+import emailjs from '@emailjs/browser';
 
 const theme=createMuiTheme({
   palette:{
@@ -16,22 +18,21 @@ const theme=createMuiTheme({
 })
 
 const Contact = () => {
+  const form = useRef();
 
-  const [inputs,setInputs]=useState({
-    name:'',
-    email:'',
-    msg:''
-  });
-  function handleChange(e){
-    setInputs(prevInputs => ({
-      ...prevInputs,
-      [e.target.name]:[e.target.value],
-    }))
-  }
-  function handleSubmit(e){
+  function sendEmail(e) {
     e.preventDefault();
-    console.log(inputs);
-  }
+
+    emailjs.sendForm('service_14ox91l', 'template_tj20hkb', form.current, 'W_7dsCRKmxiM5OgTR')
+      .then((result) => {
+          console.log(result.text);
+          e.target.reset();
+          alert('message sent!');
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
+
 
   return (
     <ThemeProvider theme={theme}>
@@ -67,15 +68,14 @@ const Contact = () => {
           </div>
           <div className="contact2">
             <div className="form">
-            <form onSubmit={handleSubmit}>
-              <TextField fullWidth label='Name' name="name" value={inputs.name} type='text' onChange={handleChange} variant='outlined'  margin="dense" color="primary" focused/>
+            <form ref={form}  onSubmit={sendEmail}>
+              <TextField fullWidth label='Name' name="name"  type='text'  variant='outlined'  margin="dense"  focused sx={{ input: { color: 'white' } }}  />
               <br />
-              <TextField fullWidth label='Email' name="email" value={inputs.email} type='email' onChange={handleChange} variant='outlined'  margin="dense" focused />
+              <TextField fullWidth label='Email' name="email" type='email' variant='outlined'  margin="dense" focused sx={{ input: { color: 'white' } }}  />
               <br />
-              <TextField fullWidth label='Message' rows={4} name="msg" type='text' value={inputs.id} onChange={handleChange}variant='outlined'  margin="dense" multiline focused
-              />
+              <TextField fullWidth label='Message' rows={4} name="msg" type='text' variant='outlined'  margin="dense" multiline focused inputProps={{ style: { color: "white" } }} />
               <br />
-              <Button variant="outlined" endIcon={<SendIcon />}>
+              <Button variant="outlined" endIcon={<SendIcon />} type='submit'>
                 Send
               </Button>
           </form>

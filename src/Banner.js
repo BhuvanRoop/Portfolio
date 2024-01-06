@@ -4,8 +4,8 @@ import './banner.css'
 const Banner = () => {
   return (
     <div className='banner' >
-        <h1 style={{color:'white'}}>Hi,I am <span style={{color:'red'}}> Bhuvan</span></h1>
-        <h3 style={{color:'white'}}> I am a Web Developer</h3>    
+        <h1 style={{color:'white'}}>Hello,I am <span style={{color:'red'}}> Bhuvan</span></h1>
+        <h3 style={{color:'white'}}>  Web Developer</h3>    
     </div>
   )
 }

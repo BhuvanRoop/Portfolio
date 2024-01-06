@@ -1,6 +1,5 @@
 import React from 'react'
 import './navbar.css'
-import { useState,useEffect } from 'react';
 import { Link } from 'react-scroll';
 
 const Navbar = () => {
@@ -13,10 +12,10 @@ const Navbar = () => {
                   <Link to='tags' smooth={true}>Home</Link>   
                 </li>
                 <li>
-                  <Link to='sub-sec' smooth={true} offset={-400}>Skills</Link>
+                  <Link to='sub-sec' smooth={true} offset={100}>Skills</Link>
                 </li>
                 <li>
-                  <Link to='sub-sec' smooth={true} offset={50}>Projects</Link>
+                  <Link to='sub-sec' smooth={true} offset={500}>Projects</Link>
                 </li>
                 
             </div>
@@ -39,8 +38,6 @@ const Navbar = () => {
             
             
         </div>
-        
-        
     </div>
   )
 }

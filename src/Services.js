@@ -1,8 +1,8 @@
 import React, { useState,useEffect } from 'react'
 import './services.css'
-import work1 from './work-1.png'
-import work2 from './work-2.png'
-import link from './ext-link.png'
+import work1 from './Assets/work-1.png'
+import work2 from './Assets/work-2.png'
+import link from './Assets/ext-link.png'
 import Contact from './Contact'
 import { Button } from '@mui/material'
 import { createMuiTheme,ThemeProvider } from '@mui/material'
@@ -39,8 +39,8 @@ const Services = () => {
                 
                 <div className="layer" style={{height:desc1?'100%':'0'}}>
                     <h3 style={{color:'white'}}>Web Streaming Platform</h3>
-                    <p style={{color:'white'}} >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto voluptatibus adipisci fuga, modi exercitationem ad eius error, ullam voluptate </p>
-                    <a href="https://netflix-c2e59.web.app/v" target='blank'>
+                    <p style={{color:'white'}} >Built a frontend clone of Netflix . Data like the description and posters of the movies and the TV shows have been fetched using Axios through an API from a third -party website .</p>
+                    <a href="https://netflix-c2e59.firebaseapp.com/" target='blank'>
                         <img className='link'  src={link} alt="" />
                     </a>
                 </div>
@@ -56,7 +56,7 @@ const Services = () => {
                 
                 <div className="layer" style={{height:desc2?'100%':'0'}}>
                     <h3 style={{color:'white'}}>Keeper App</h3>
-                    <p style={{color:'white'}}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto voluptatibus adipisci fuga, modi exercitationem ad eius error, ullam voluptate </p>
+                    <p style={{color:'white'}}>Built a note taking app similar to google keep made using ReactJS.Has features to add and delete notes with title and description .  </p>
                     <a href="https://keeper-33da7.web.app/" target='blank'>
                         <img className='link'  src={link} alt="" />
                     </a>
@@ -78,7 +78,8 @@ const Services = () => {
                 <div className="layer" >
                     <h3 style={{color:'white'}}>Web Streaming Platform</h3>
                     <p style={{color:'white'}} >Built a frontend clone of Netflix . Data like the description and posters of the movies and the TV shows have been fetched using Axios through an API from a third -party website . </p>
-                    <a href="https://netflix-c2e59.web.app/v" target='blank'>
+                    <p style={{color:'white'}}><span style={{fontWeight:'bold',color:'white'}}>Skills</span>: HTML, CSS, JavaScript, ReactJS, Firebase</p>
+                    <a href="https://netflix-c2e59.firebaseapp.com/" target='blank'>
                         <img className='link'  src={link} alt="" />
                     </a>
                 </div>
@@ -89,6 +90,7 @@ const Services = () => {
                 <div className="layer" >
                     <h3 style={{color:'white'}}>Keeper App</h3>
                     <p style={{color:'white'}}>Built a note taking app similar to google keep made using ReactJS.Has features to add and delete notes with title and description . </p>
+                    <p style={{color:'white'}}><span style={{fontWeight:'bold',color:'white'}}>Skills</span>: HTML, CSS, JavaScript, ReactJS, Firebase (Hosting).</p>
                     <a href="https://keeper-33da7.web.app/" target='blank'>
                         <img className='link'  src={link} alt="" />
                     </a>

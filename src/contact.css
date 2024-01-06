@@ -16,6 +16,7 @@
 .form{
     display: flex;
     flex-direction: column;
+    color: aliceblue;
 }
 .mail{
     margin: 0.8em 0;
